@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/br"
+    android:orientation="vertical"
+    tools:context=".ModifyFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/cancelButton_Detailed"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/baseline_clear_24" />
+
+        <EditText
+            android:id="@+id/detailFirstname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="40dp"
+            android:text="FirstName"
+            android:textColor="@color/teal_700"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/detailLastname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:text="LastName"
+            android:textColor="@color/teal_700"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:id="@+id/cardImage"
+        android:layout_gravity="center">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:background="@drawable/circle"
+                android:src="@drawable/user" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floatingActionButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="130dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="-130dp"
+                android:clickable="true"
+                android:tint="@color/black"
+                android:backgroundTint="#00000000"
+                android:src="@drawable/baseline_camera_alt_24"
+                android:contentDescription="TODO"
+                android:focusable="true">
+
+            </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit Information:"
+        android:textColor="@color/teal_700"
+        android:textStyle="bold"
+        android:textSize="25sp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/cardInformation"
+        android:layout_gravity="center">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/fnL">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Name: "
+                    android:paddingTop="10dp"
+                    android:textSize="23sp"
+                    android:textColor="@color/black" />
+                <EditText
+                    android:id="@+id/Prenom_Detailed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="24dp"
+                    android:textColor="@color/black"
+                    android:hint="Name"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/fnL"
+                android:id="@+id/nameL">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="famName: "
+                    android:paddingTop="10dp"
+                    android:textSize="23sp"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/fName_Detailed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="24dp"
+                    android:textColor="@color/black"
+                    android:hint="Familyname"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/nameL"
+                android:id="@+id/addL">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Address: "
+                    android:paddingTop="10dp"
+                    android:textSize="23sp"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/address_Detailed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="24dp"
+                    android:textColor="@color/black"
+                    android:layout_below="@id/nameL"
+                    android:hint="Address"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/addL"
+                android:id="@+id/emailL">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Email: "
+                    android:paddingTop="10dp"
+                    android:textSize="23sp"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/email_Detailed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="24dp"
+                    android:textColor="@color/black"
+                    android:layout_below="@id/addL"
+                    android:hint="email"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/emailL"
+                android:id="@+id/phoneL">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Phone: "
+                    android:paddingTop="10dp"
+                    android:textSize="23sp"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/numtel_Detailed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="24dp"
+                    android:textColor="@color/black"
+                    android:layout_below="@id/emailL"
+                    android:hint="Phone number"
+                    android:inputType="phone" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/phoneL"
+                android:id="@+id/jobL">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Job: "
+                    android:paddingTop="10dp"
+                    android:textSize="23sp"
+                    android:textColor="@color/black" />
+
+
+                <EditText
+                    android:id="@+id/job_Detailed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="24dp"
+                    android:textColor="@color/black"
+                    android:layout_below="@id/phoneL"
+                    android:hint="Job"/>
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/loginButton"
+                android:text="Save"
+                android:textSize="18sp"
+                android:backgroundTint="@color/teal_200"
+                android:layout_below="@id/jobL"
+                app:cornerRadius="20dp"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

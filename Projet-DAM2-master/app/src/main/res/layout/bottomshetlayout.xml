@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialogbkg">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="137dp"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/createText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="5dp"
+            android:padding="8dp"
+            android:text="Create"
+            android:textAlignment="viewStart"
+            android:textColor="@color/vertApp"
+            android:textSize="25dp" />
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:background="@drawable/circle"
+                android:scaleType="centerCrop"
+                android:src="@drawable/user" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floatingActionButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="100dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="-100dp"
+                android:backgroundTint="#00000000"
+                android:clickable="true"
+                android:contentDescription="TODO"
+                android:focusable="true"
+                android:src="@drawable/baseline_camera_alt_24"
+                android:tint="@color/black">
+
+            </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <ImageView
+            android:id="@+id/cancelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="85dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/baseline_clear_24" />
+
+    </LinearLayout>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="9dp"
+        app:cardCornerRadius="40dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="30dp"
+        android:background="@drawable/custom_edittext">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="7dp">
+
+            <TextView
+                android:id="@+id/Nametext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24dp"
+                android:textColor="@color/black"
+                android:text="Please enter information"
+                android:layout_centerHorizontal="true"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/matL"
+                android:layout_below="@id/Nametext">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Mat: "
+                    android:paddingTop="10dp"
+                    android:textSize="23sp"
+                    android:textColor="@color/black" />
+                <EditText
+                    android:id="@+id/Mat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="23dp"
+                    android:textColor="@color/black"
+                    android:layout_below="@id/Nametext"
+                    android:hint="Matricule"
+                    android:inputType="phone" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/fnL"
+                android:layout_below="@id/matL">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Name: "
+                    android:paddingTop="10dp"
+                    android:textSize="23sp"
+                    android:textColor="@color/black" />
+                <EditText
+                    android:id="@+id/Prenom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="24dp"
+                    android:textColor="@color/black"
+                    android:hint="Name"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/fnL"
+                android:id="@+id/nameL">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="famName: "
+                    android:paddingTop="10dp"
+                    android:textSize="23sp"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/Name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="24dp"
+                    android:textColor="@color/black"
+                    android:hint="Familyname"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/nameL"
+                android:id="@+id/addL">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Address: "
+                    android:paddingTop="10dp"
+                    android:textSize="23sp"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="24dp"
+                    android:textColor="@color/black"
+                    android:layout_below="@id/nameL"
+                    android:hint="Address"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/addL"
+                android:id="@+id/emailL">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Email: "
+                    android:paddingTop="10dp"
+                    android:textSize="23sp"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="24dp"
+                    android:textColor="@color/black"
+                    android:layout_below="@id/addL"
+                    android:hint="email"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/emailL"
+                android:id="@+id/phoneL">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Phone: "
+                    android:paddingTop="10dp"
+                    android:textSize="23sp"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/numtel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="24dp"
+                    android:textColor="@color/black"
+                    android:layout_below="@id/emailL"
+                    android:hint="Phone number"
+                    android:inputType="phone" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/phoneL"
+                android:id="@+id/jobL">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Job: "
+                    android:paddingTop="10dp"
+                    android:textSize="23sp"
+                    android:textColor="@color/black" />
+
+
+                <EditText
+                    android:id="@+id/job"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="24dp"
+                    android:textColor="@color/black"
+                    android:layout_below="@id/phoneL"
+                    android:hint="Job"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/jobL"
+                android:layout_marginTop="10dp"
+                android:text="Date of birth"
+                android:textSize="24dp"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/datePicker"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="JAN 01 2024"
+                android:textSize="24dp"
+                android:layout_below="@id/date"
+                android:textColor="@color/black"
+                style="?android:spinnerStyle"
+                android:layout_marginTop="10dp"
+                android:onClick="openDatePicker"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/loginButton"
+                android:text="Save"
+                android:textSize="18sp"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="@color/teal_200"
+                android:layout_below="@id/datePicker"
+                app:cornerRadius="20dp"/>
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
